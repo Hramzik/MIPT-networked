@@ -1,33 +1,83 @@
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/select.h>
-#include <netdb.h>
-#include <cstring>
-#include <cstdio>
+#include "client.h"
 #include <iostream>
-#include "socket_tools.h"
+#include <cstring>
+#include <unistd.h>
 
-int main(int argc, const char **argv)
+int main()
 {
-  const char *port = "2025";
+    std::cout << "/connect <name> to connect to server\n";
+    Client client("2025");
+    client.run();
+    return 0;
+}
 
-  addrinfo resAddrInfo;
-  int sfd = create_dgram_socket("localhost", port, &resAddrInfo);
+Client::Client(const std::string &port)
+{
+    sfd = create_dgram_socket("localhost", port.c_str(), &server_addr);
+    if (sfd == -1) throw std::runtime_error("Failed to create client socket");
+    running = true;
+}
 
-  if (sfd == -1)
-  {
-    printf("Cannot create a socket\n");
-    return 1;
-  }
+Client::~Client()
+{
+    running = false;
+    if (send_thread.joinable()) send_thread.join();
+    if (receive_thread.joinable()) receive_thread.join();
+    close(sfd);
+}
 
-  while (true)
-  {
-    std::string input;
-    printf(">");
-    std::getline(std::cin, input);
-    ssize_t res = sendto(sfd, input.c_str(), input.size(), 0, resAddrInfo.ai_addr, resAddrInfo.ai_addrlen);
-    if (res == -1)
-      std::cout << strerror(errno) << std::endl;
-  }
-  return 0;
+void Client::connect(const std::string &name)
+{
+    sendto(sfd, ("/connect " + name).c_str(), name.size() + 9, 0, server_addr.ai_addr, server_addr.ai_addrlen);
+}
+
+void Client::send_messages()
+{
+    while (running)
+    {
+        std::string input;
+        std::cout << "> ";
+        std::getline(std::cin, input);
+        if (input == "/exit")
+        {
+            running = false;
+            break;
+        }
+        sendto(sfd, input.c_str(), input.size(), 0, server_addr.ai_addr, server_addr.ai_addrlen);
+    }
+}
+
+void Client::receive_messages()
+{
+    char buffer[1024];
+    while (running)
+    {
+        fd_set readSet;
+        FD_ZERO(&readSet);
+        FD_SET(sfd, &readSet);
+
+        timeval timeout = {1, 0};
+        if (select(sfd + 1, &readSet, nullptr, nullptr, &timeout) > 0)
+        {
+            if (FD_ISSET(sfd, &readSet))
+            {
+                memset(buffer, 0, sizeof(buffer));
+                ssize_t numBytes = recvfrom(sfd, buffer, sizeof(buffer) - 1, 0, nullptr, nullptr);
+                if (numBytes > 0)
+                {
+                    std::cout << "\nServer: " << buffer << "\n";
+                    std::cout << "> " << std::flush;
+                }
+            }
+        }
+    }
+}
+
+void Client::run()
+{
+    send_thread = std::thread(&Client::send_messages, this);
+    receive_thread = std::thread(&Client::receive_messages, this);
+
+    send_thread.join();
+    receive_thread.join();
 }
