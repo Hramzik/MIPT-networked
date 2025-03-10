@@ -42,8 +42,9 @@ void Client::connectToLobbyServer() {
     enet_address_set_host(&address, "localhost");
     address.port = 10887;
     lobbyPeer = enet_host_connect(client, &address, 2, 0);
+    connectedToLobby = true;
 
-    if (!lobbyPeer) throw std::runtime_error("сannot connect to lobby");
+    if (!lobbyPeer) throw std::runtime_error("Cannot connect to lobby");
 }
 
 void Client::connectToGameServer(const std::string& address) {
@@ -96,9 +97,20 @@ void Client::updatePosition(float dt) {
     vely *= 0.99f;
 }
 
-void Client::parseNewPlayerInfo(const std::string& data) {
+void Client::parseGameServerAddr(const std::string& message) {
 
-    std::istringstream stream(data);
+    std::istringstream stream(message);
+    std::string token;
+    stream >> token; // skip "gameserver"
+    stream >> token; // parse ip
+    connectToGameServer(token);
+}
+
+// изначально задумывалось передавать информацию про всех игроков в одном пакете
+// но в итоге разделил на разные
+void Client::parsePlayersInfo(const std::string& message) {
+
+    std::istringstream stream(message);
     std::string token;
     stream >> token; // skip "player"
 
@@ -108,15 +120,13 @@ void Client::parseNewPlayerInfo(const std::string& data) {
         stream >> token;
         std::string name = token;
 
-        players[id] = { name, false, 0 };
+        players[id] = { name, false, 0, 0 };
     }
 }
 
-// изначально задумывалось передавать все позиции в одном пакете
-// но потом решил разделить на разные пакеты
-void Client::parsePlayersPosition(const std::string& data) {
+void Client::parsePlayersPosition(const std::string& message) {
 
-    std::istringstream stream(data);
+    std::istringstream stream(message);
     std::string token;
     stream >> token; // skip "pos"
     int id;
@@ -129,9 +139,9 @@ void Client::parsePlayersPosition(const std::string& data) {
     }
 }
 
-void Client::parsePlayersPing(const std::string& data) {
+void Client::parsePlayersPing(const std::string& message) {
 
-    std::istringstream stream(data);
+    std::istringstream stream(message);
     std::string token;
     stream >> token; // skip "ping"
     int id;
@@ -154,7 +164,7 @@ void Client::draw() {
     int yOffset = 80;
     for (const auto& [id, player] : players) {
 
-        DrawText(TextFormat("Player %d: %s (Ping: %d)", id, player.name.c_str(), player.ping), 20, yOffset, 20, WHITE);
+        DrawText(TextFormat("%s (Ping: %d)", player.name.c_str(), player.ping), 20, yOffset, 20, WHITE);
         yOffset += 25;
     }
 
@@ -169,20 +179,15 @@ void Client::draw() {
     EndDrawing();
 }
 
-void Client::handleLobbyEvents() {
+void Client::handleEvents() {
 
     ENetEvent event;
 
     while (enet_host_service(client, &event, 10) > 0) {
         switch (event.type) {
 
-            case ENET_EVENT_TYPE_CONNECT:
-                connectedToLobby = true;
-                break;
-
             case ENET_EVENT_TYPE_RECEIVE:
-                std::cout << "new message: " << (const char*)event.packet->data << "\n";
-                parseLobbyMessage((const char*)event.packet->data);
+                parseMessage((const char*)event.packet->data);
                 enet_packet_destroy(event.packet);
                 break;
 
@@ -191,41 +196,14 @@ void Client::handleLobbyEvents() {
     }
 }
 
-void Client::parseLobbyMessage(const std::string& message) {
+void Client::parseMessage(const std::string& message) {
 
-    if (message.find("gameserver") == 0) {
+    if (message.find("pos")    == 0) return parsePlayersPosition(message);
+    if (message.find("ping")   == 0) return parsePlayersPing(message);
 
-        std::istringstream stream(message);
-        std::string token;
-        stream >> token; // skip "gameserver"
-        stream >> token; // parse ip
-        connectToGameServer(token);
-    }
-}
-
-void Client::handleGameEvents() {
-
-    ENetEvent event;
-
-    while (enet_host_service(client, &event, 10) > 0) {
-        switch (event.type) {
-
-            case ENET_EVENT_TYPE_RECEIVE:
-                std::cout << "new message: " << (const char*)event.packet->data << "\n";
-                parseGameMessage((const char*)event.packet->data);
-                enet_packet_destroy(event.packet);
-                break;
-
-            default: break;
-        }
-    }
-}
-
-void Client::parseGameMessage(const std::string& message) {
-
-    if (message.find("player") == 0) parseNewPlayerInfo(message);
-    if (message.find("pos")    == 0) parsePlayersPosition(message);
-    if (message.find("ping")   == 0) parsePlayersPing(message);
+    std::cout << "new message: " << message << "\n";
+    if (message.find("gameserver") == 0) return parseGameServerAddr(message);
+    if (message.find("player") == 0)     return parsePlayersInfo(message);
 }
 
 void Client::start() {
@@ -237,10 +215,9 @@ void Client::start() {
     while (!WindowShouldClose()) {
 
         float dt = GetFrameTime();
-        handleLobbyEvents();
+        handleEvents();
 
         if (connectedToGame) {
-            handleGameEvents();
             sendPosition();
             updatePosition(dt);
         }

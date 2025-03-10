@@ -2,10 +2,15 @@
 #include <stdexcept>
 #include <cstring>
 #include <sstream>
+#include <cstdlib>
+#include <ctime>
+#include <vector>
 
 #include "GameServer.h"
 
 int main() {
+
+    std::srand(std::time(nullptr));
 
     GameServer gameServer;
     gameServer.start();
@@ -106,14 +111,14 @@ void GameServer::handleEvents() {
 
             case ENET_EVENT_TYPE_CONNECT:
                 std::cout << "new connection from " << event.peer->address.host << ":" << event.peer->address.port << "\n";
-                players[event.peer] = { nextPlayerId, "Player" + nextPlayerId };
+                players[event.peer] = { nextPlayerId, generatePlayerName(nextPlayerId) };
                 ++nextPlayerId;
                 sendNewPlayerInfo(players[event.peer]);
                 sendPlayersInfo(event.peer);
                 break;
 
             case ENET_EVENT_TYPE_RECEIVE:
-                std::cout << "new message:" << (const char*) event.packet->data << "\n";
+                //std::cout << "new message:" << (const char*) event.packet->data << "\n";
                 parseClientMessage(event.peer, (const char*) event.packet->data);
                 enet_packet_destroy(event.packet);
                 break;
@@ -121,6 +126,22 @@ void GameServer::handleEvents() {
             default: break;
         }
     }
+}
+
+std::string GameServer::generatePlayerName(int id) {
+
+    static const std::vector<std::string> baseNames = {
+        "Noob", "tomar", "Pro", "Alexey", "Viktor", "Mamut", "Vladimir", "Mineralka",
+        "Coltik", "ElPrimo", "Dashkov", "Stepin", "Surfer", "Rider", "Russia", "USA",
+        "Canada", "Sitetampo", "SpenLC", "MMA", "Simple", "Flamie", "electronik",
+        "Perfecto", "Brawler", "Niko", "Maisie", "Messi", "Ronaldo", "Monesi", "Walter",
+        "Obama", "Putin", "Trump", "America", "Burger", "Generalus", "NoobDestroyer", "Cambala"
+    };
+
+    std::string baseName = baseNames[std::rand() % baseNames.size()];
+    int number = 210 * id + std::rand() % 10;
+
+    return baseName + std::to_string(number);
 }
 
 void GameServer::start() {
