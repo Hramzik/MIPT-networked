@@ -9,13 +9,16 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(W2_CLIENT_SOURCES
-    client.cpp
+    Client.cpp
     )
 
-set(W2_LOBBY_SOURCES
-    lobby.cpp
+set(W2_LOBBY_SERVER_SOURCES
+    LobbyServer.cpp
     )
 
+set(W2_GAME_SERVER_SOURCES
+    GameServer.cpp
+    )
 
 include_directories("../3rdParty/enet/include")
 
@@ -24,17 +27,22 @@ if(MSVC)
   add_compile_definitions(NOVIRTUALKEYCODES NOWINMESSAGES NOWINSTYLES NOSYSMETRICS NOMENUS NOICONS NOKEYSTATES NOSYSCOMMANDS NORASTEROPS NOSHOWWINDOW OEMRESOURCE NOATOM NOCLIPBOARD NOCOLOR NOCTLMGR NODRAWTEXT NOGDI NOKERNEL NOUSER NOMB NOMEMMGR NOMETAFILE NOMINMAX NOMSG NOOPENFILE NOSCROLL NOSERVICE NOSOUND NOTEXTMETRIC NOWH NOWINOFFSETS NOCOMM NOKANJI NOHELP NOPROFILER NODEFERWINDOWPOS NOMCX)
 endif()
 
-add_executable(w2_client ${W2_CLIENT_SOURCES})
-target_link_libraries(w2_client PUBLIC project_options project_warnings)
-target_link_libraries(w2_client PUBLIC raylib enet)
+add_executable(client ${W2_CLIENT_SOURCES})
+target_link_libraries(client PUBLIC project_options project_warnings)
+target_link_libraries(client PUBLIC raylib enet)
 
-add_executable(w2_lobby ${W2_LOBBY_SOURCES})
-target_link_libraries(w2_lobby PUBLIC project_options project_warnings)
-target_link_libraries(w2_lobby PUBLIC enet)
+add_executable(lobby_server ${W2_LOBBY_SERVER_SOURCES})
+target_link_libraries(lobby_server PUBLIC project_options project_warnings)
+target_link_libraries(lobby_server PUBLIC enet)
+
+add_executable(game_server ${W2_GAME_SERVER_SOURCES})
+target_link_libraries(game_server PUBLIC project_options project_warnings)
+target_link_libraries(game_server PUBLIC enet)
 
 if(MSVC)
-  target_link_libraries(w2_client PUBLIC ws2_32.lib winmm.lib)
-  target_link_libraries(w2_lobby PUBLIC ws2_32.lib winmm.lib)
+  target_link_libraries(client PUBLIC ws2_32.lib winmm.lib)
+  target_link_libraries(lobby_server PUBLIC ws2_32.lib winmm.lib)
+  target_link_libraries(game_server PUBLIC ws2_32.lib winmm.lib)
 endif()
 
 

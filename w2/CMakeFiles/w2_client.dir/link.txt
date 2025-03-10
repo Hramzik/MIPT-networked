@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/w2_client.dir/client.cpp.o -o w2_client  ../3rdParty/raylib/raylib/libraylib.a ../3rdParty/enet/libenet.a -lm -latomic -lpthread /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so ../3rdParty/raylib/raylib/external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/librt.a -lm -ldl 

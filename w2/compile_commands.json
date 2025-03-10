@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2",
+  "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/../3rdParty/enet/include -std=c++20 -o CMakeFiles/client.dir/Client.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/Client.cpp",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/Client.cpp"
+},
+{
+  "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2",
+  "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/../3rdParty/enet/include -std=c++20 -o CMakeFiles/lobby_server.dir/LobbyServer.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/LobbyServer.cpp",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/LobbyServer.cpp"
+},
+{
+  "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2",
+  "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/../3rdParty/enet/include -std=c++20 -o CMakeFiles/game_server.dir/GameServer.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/GameServer.cpp",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/GameServer.cpp"
+}
+]
