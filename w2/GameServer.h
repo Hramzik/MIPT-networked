@@ -22,6 +22,8 @@ private:
     void sendPlayersInfo(ENetPeer* dstPeer);
     void parseClientMessage(ENetPeer* srcPeer, const std::string& message);
 
+    std::string generatePlayerName(int id);
+
     ENetHost* server;
     std::map<ENetPeer*, PlayerInfo> players;
     int nextPlayerId;

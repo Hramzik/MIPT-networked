@@ -22,17 +22,16 @@ public:
 private:
     void connectToLobbyServer();
     void connectToGameServer (const std::string& address);
-    void handleLobbyEvents();
-    void handleGameEvents();
+    void handleEvents();
     void sendStartCommand();
     void sendPosition();
 
     void updatePosition(float dt);
     void draw();
 
-    void parseLobbyMessage(const std::string& message);
-    void parseGameMessage     (const std::string& message);
-    void parseNewPlayerInfo   (const std::string& message);
+    void parseMessage(const std::string& message);
+    void parseGameServerAddr  (const std::string& message);
+    void parsePlayersInfo     (const std::string& message);
     void parsePlayersPosition (const std::string& message);
     void parsePlayersPing     (const std::string& message);
 
