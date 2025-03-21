@@ -69,19 +69,19 @@ include w4/CMakeFiles/w4.dir/progress.make
 # Include the compile flags for this target's objects.
 include w4/CMakeFiles/w4.dir/flags.make
 
-w4/CMakeFiles/w4.dir/main.cpp.o: w4/CMakeFiles/w4.dir/flags.make
-w4/CMakeFiles/w4.dir/main.cpp.o: w4/main.cpp
-w4/CMakeFiles/w4.dir/main.cpp.o: w4/CMakeFiles/w4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object w4/CMakeFiles/w4.dir/main.cpp.o"
-	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT w4/CMakeFiles/w4.dir/main.cpp.o -MF CMakeFiles/w4.dir/main.cpp.o.d -o CMakeFiles/w4.dir/main.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/main.cpp
+w4/CMakeFiles/w4.dir/client.cpp.o: w4/CMakeFiles/w4.dir/flags.make
+w4/CMakeFiles/w4.dir/client.cpp.o: w4/client.cpp
+w4/CMakeFiles/w4.dir/client.cpp.o: w4/CMakeFiles/w4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object w4/CMakeFiles/w4.dir/client.cpp.o"
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT w4/CMakeFiles/w4.dir/client.cpp.o -MF CMakeFiles/w4.dir/client.cpp.o.d -o CMakeFiles/w4.dir/client.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/client.cpp
 
-w4/CMakeFiles/w4.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/w4.dir/main.cpp.i"
-	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/main.cpp > CMakeFiles/w4.dir/main.cpp.i
+w4/CMakeFiles/w4.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/w4.dir/client.cpp.i"
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/client.cpp > CMakeFiles/w4.dir/client.cpp.i
 
-w4/CMakeFiles/w4.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/w4.dir/main.cpp.s"
-	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/main.cpp -o CMakeFiles/w4.dir/main.cpp.s
+w4/CMakeFiles/w4.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/w4.dir/client.cpp.s"
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/client.cpp -o CMakeFiles/w4.dir/client.cpp.s
 
 w4/CMakeFiles/w4.dir/protocol.cpp.o: w4/CMakeFiles/w4.dir/flags.make
 w4/CMakeFiles/w4.dir/protocol.cpp.o: w4/protocol.cpp
@@ -99,13 +99,13 @@ w4/CMakeFiles/w4.dir/protocol.cpp.s: cmake_force
 
 # Object files for target w4
 w4_OBJECTS = \
-"CMakeFiles/w4.dir/main.cpp.o" \
+"CMakeFiles/w4.dir/client.cpp.o" \
 "CMakeFiles/w4.dir/protocol.cpp.o"
 
 # External object files for target w4
 w4_EXTERNAL_OBJECTS =
 
-w4/w4: w4/CMakeFiles/w4.dir/main.cpp.o
+w4/w4: w4/CMakeFiles/w4.dir/client.cpp.o
 w4/w4: w4/CMakeFiles/w4.dir/protocol.cpp.o
 w4/w4: w4/CMakeFiles/w4.dir/build.make
 w4/w4: 3rdParty/raylib/raylib/libraylib.a

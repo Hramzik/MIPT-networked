@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/w5_server.dir/server.cpp.o CMakeFiles/w5_server.dir/protocol.cpp.o CMakeFiles/w5_server.dir/entity.cpp.o -o w5_server  ../3rdParty/enet/libenet.a 
+/usr/bin/c++ CMakeFiles/w5_server.dir/server.cpp.o CMakeFiles/w5_server.dir/protocol.cpp.o CMakeFiles/w5_server.dir/entity.cpp.o -o w5_server  ../3rdParty/enet/libenet.a

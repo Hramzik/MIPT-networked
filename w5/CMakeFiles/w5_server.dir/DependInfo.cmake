@@ -13,9 +13,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/server.cpp" "w5/CMakeFiles/w5_server.dir/server.cpp.o" "gcc" "w5/CMakeFiles/w5_server.dir/server.cpp.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/CMakeFiles/enet.dir/DependInfo.cmake"
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

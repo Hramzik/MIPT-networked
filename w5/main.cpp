@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "entity.h"
+#include "stdio.h"
 #include "protocol.h"
 
 

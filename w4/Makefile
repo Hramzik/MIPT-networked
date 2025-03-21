@@ -209,29 +209,29 @@ w4_server/fast:
 	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w4/CMakeFiles/w4_server.dir/build.make w4/CMakeFiles/w4_server.dir/build
 .PHONY : w4_server/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+client.o: client.cpp.o
+.PHONY : client.o
 
 # target to build an object file
-main.cpp.o:
-	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w4/CMakeFiles/w4.dir/build.make w4/CMakeFiles/w4.dir/main.cpp.o
-.PHONY : main.cpp.o
+client.cpp.o:
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w4/CMakeFiles/w4.dir/build.make w4/CMakeFiles/w4.dir/client.cpp.o
+.PHONY : client.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+client.i: client.cpp.i
+.PHONY : client.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w4/CMakeFiles/w4.dir/build.make w4/CMakeFiles/w4.dir/main.cpp.i
-.PHONY : main.cpp.i
+client.cpp.i:
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w4/CMakeFiles/w4.dir/build.make w4/CMakeFiles/w4.dir/client.cpp.i
+.PHONY : client.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+client.s: client.cpp.s
+.PHONY : client.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w4/CMakeFiles/w4.dir/build.make w4/CMakeFiles/w4.dir/main.cpp.s
-.PHONY : main.cpp.s
+client.cpp.s:
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w4/CMakeFiles/w4.dir/build.make w4/CMakeFiles/w4.dir/client.cpp.s
+.PHONY : client.cpp.s
 
 protocol.o: protocol.cpp.o
 .PHONY : protocol.o
@@ -300,9 +300,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... w4"
 	@echo "... w4_server"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
 	@echo "... protocol.o"
 	@echo "... protocol.i"
 	@echo "... protocol.s"
