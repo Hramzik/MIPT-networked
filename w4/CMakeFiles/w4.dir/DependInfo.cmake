@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/main.cpp" "w4/CMakeFiles/w4.dir/main.cpp.o" "gcc" "w4/CMakeFiles/w4.dir/main.cpp.o.d"
+  "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/client.cpp" "w4/CMakeFiles/w4.dir/client.cpp.o" "gcc" "w4/CMakeFiles/w4.dir/client.cpp.o.d"
   "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/protocol.cpp" "w4/CMakeFiles/w4.dir/protocol.cpp.o" "gcc" "w4/CMakeFiles/w4.dir/protocol.cpp.o.d"
   )
 

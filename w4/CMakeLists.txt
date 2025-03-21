@@ -9,14 +9,14 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(W4_SOURCES
-    main.cpp
+    client.cpp
     protocol.cpp
-    )
+)
 
 set(W4_SERVER_SOURCES
     server.cpp
     protocol.cpp
-    )
+)
 
 
 include_directories("../3rdParty/enet/include")

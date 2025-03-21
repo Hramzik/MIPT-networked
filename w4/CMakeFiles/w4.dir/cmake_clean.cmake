@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/w4.dir/main.cpp.o"
-  "CMakeFiles/w4.dir/main.cpp.o.d"
+  "CMakeFiles/w4.dir/client.cpp.o"
+  "CMakeFiles/w4.dir/client.cpp.o.d"
   "CMakeFiles/w4.dir/protocol.cpp.o"
   "CMakeFiles/w4.dir/protocol.cpp.o.d"
   "w4"
