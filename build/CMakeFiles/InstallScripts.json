@@ -1,0 +1,18 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/3rdParty/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/3rdParty/raylib/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/3rdParty/raylib/raylib/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/3rdParty/raylib/raylib/external/glfw/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/3rdParty/raylib/raylib/external/glfw/src/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/3rdParty/enet/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/w2/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/w4/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/w5/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/w7/cmake_install.cmake",
+		"/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build/w10/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -7,11 +7,11 @@
 #include <vector>
 #include <map>
 
-constexpr float FIXED_DT = 1.0f / 50.0f;
 constexpr uint32_t MAX_TICKS_PER_FRAME = 10;
 
 static std::vector<Entity> entities;
 static std::map<uint16_t, ENetPeer*> controlledMap;
+uint32_t currentTick = 0;
 
 void on_join(ENetPacket *packet, ENetPeer *peer, ENetHost *host)
 {
@@ -43,16 +43,22 @@ void on_join(ENetPacket *packet, ENetPeer *peer, ENetHost *host)
   send_set_controlled_entity(peer, newEid);
 }
 
-void on_input(ENetPacket *packet)
-{
-  uint16_t eid = invalid_entity;
-  float thr = 0.f; float steer = 0.f;
-  deserialize_entity_input(packet, eid, thr, steer);
-  for (Entity &e : entities)
-    if (e.eid == eid)
-    {
-      e.thr = thr;
-      e.steer = steer;
+void on_input(ENetPacket *packet) {
+    uint16_t eid;
+    float thr, steer;
+    uint32_t tick;
+    deserialize_entity_input(packet, eid, thr, steer, tick);
+
+    // в будущем можно игнорировать старые пакеты
+    // if (tick + C < currentTick) {
+    //     return;
+    // }
+
+    for (Entity &e : entities) {
+        if (e.eid == eid) {
+            e.thr = thr;
+            e.steer = steer;
+        }
     }
 }
 
@@ -84,13 +90,13 @@ static void update_net(ENetHost* server)
   }
 }
 
-static void simulate_world(ENetHost* server, float dt, uint32_t tick) {
+static void simulate_world(ENetHost* server, float dt) {
     uint32_t curTime = enet_time_get();
     for (Entity &e : entities) {
         simulate_entity(e, dt);
         for (size_t i = 0; i < server->peerCount; ++i) {
             ENetPeer *peer = &server->peers[i];
-            send_snapshot(peer, e.eid, e.x, e.y, e.ori, curTime, tick);
+            send_snapshot(peer, e.eid, e.x, e.y, e.ori, e.vx, e.vy, e.omega, curTime, currentTick);
         }
     }
 }
@@ -123,7 +129,6 @@ int main(int argc, const char **argv)
 
   uint32_t lastTime = enet_time_get();
     float accumulator = 0.0f; // Накопитель времени
-    uint32_t currentTick = 0;
 
     while (true) {
         uint32_t curTime = enet_time_get();
@@ -137,7 +142,7 @@ int main(int argc, const char **argv)
         int ticksProcessed = 0;
         while (accumulator >= FIXED_DT && ticksProcessed < MAX_TICKS_PER_FRAME) {
             update_net(server);
-            simulate_world(server, FIXED_DT, currentTick);
+            simulate_world(server, FIXED_DT);
             accumulator -= FIXED_DT;
             currentTick++;
             ticksProcessed++;

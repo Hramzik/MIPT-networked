@@ -1,307 +1,374 @@
 [
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/raudio.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/raudio.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/raudio.c",
+  "output": "3rdParty/raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o"
+},
+{
+  "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
   "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/rcore.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rcore.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rcore.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rcore.c",
+  "output": "3rdParty/raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
   "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/rmodels.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rmodels.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rmodels.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rmodels.c",
+  "output": "3rdParty/raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
   "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/rshapes.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rshapes.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rshapes.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rshapes.c",
+  "output": "3rdParty/raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
   "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/rtext.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rtext.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rtext.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rtext.c",
+  "output": "3rdParty/raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
   "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/rtextures.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rtextures.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rtextures.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/rtextures.c",
+  "output": "3rdParty/raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
   "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/utils.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/utils.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/utils.c"
-},
-{
-  "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib",
-  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -isystem /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o CMakeFiles/raylib.dir/raudio.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/raudio.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/raudio.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/utils.c",
+  "output": "3rdParty/raylib/raylib/CMakeFiles/raylib.dir/utils.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/context.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/context.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/context.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/context.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/context.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/init.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/init.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/init.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/init.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/init.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/init.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/input.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/input.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/input.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/input.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/input.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/input.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/monitor.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/monitor.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/monitor.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/monitor.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/monitor.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/platform.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/platform.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/platform.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/platform.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/platform.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/platform.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/vulkan.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/vulkan.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/vulkan.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/vulkan.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/window.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/window.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/window.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/window.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/window.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/window.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/egl_context.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/egl_context.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/egl_context.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/egl_context.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/osmesa_context.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/osmesa_context.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/osmesa_context.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/osmesa_context.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_init.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_init.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_init.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_init.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_init.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_init.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_monitor.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_monitor.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_monitor.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_monitor.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_monitor.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_window.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_window.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_window.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_window.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_window.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_window.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/null_joystick.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_joystick.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_joystick.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_joystick.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/null_joystick.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_module.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_module.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_module.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_module.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_module.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_time.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_time.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_time.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_time.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/posix_time.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_thread.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_thread.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_thread.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_thread.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_init.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_init.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_init.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_init.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/x11_init.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_monitor.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_monitor.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_monitor.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_monitor.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_window.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_window.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_window.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/x11_window.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/x11_window.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/xkb_unicode.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/xkb_unicode.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/xkb_unicode.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/xkb_unicode.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/glx_context.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/glx_context.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/glx_context.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/glx_context.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/glx_context.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/linux_joystick.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/linux_joystick.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/linux_joystick.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/linux_joystick.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src",
-  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -fPIC -Wall -std=c99 -o CMakeFiles/glfw.dir/posix_poll.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_poll.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_poll.c"
+  "command": "/usr/bin/cc -D_DEFAULT_SOURCE -D_GLFW_X11 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/raylib/external/glfw/src -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_poll.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_poll.c",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/src/posix_poll.c",
+  "output": "3rdParty/raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/callbacks.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/callbacks.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/callbacks.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/callbacks.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/callbacks.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/compress.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/compress.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/compress.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/compress.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/compress.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/host.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/host.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/host.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/host.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/host.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/list.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/list.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/list.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/list.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/list.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/packet.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/packet.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/packet.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/packet.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/packet.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/peer.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/peer.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/peer.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/peer.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/peer.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/protocol.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/protocol.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/protocol.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/protocol.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/protocol.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/unix.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/unix.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/unix.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/unix.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/unix.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet",
   "command": "/usr/bin/cc -DHAS_FCNTL=1 -DHAS_GETADDRINFO=1 -DHAS_GETHOSTBYADDR_R=1 -DHAS_GETHOSTBYNAME_R=1 -DHAS_GETNAMEINFO=1 -DHAS_INET_NTOP=1 -DHAS_INET_PTON=1 -DHAS_MSGHDR_FLAGS=1 -DHAS_POLL=1 -DHAS_SOCKLEN_T=1 -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/include   -Wno-error -o CMakeFiles/enet.dir/win32.c.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/win32.c",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/win32.c"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/enet/win32.c",
+  "output": "3rdParty/enet/CMakeFiles/enet.dir/win32.c.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/client.dir/Client.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/Client.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/Client.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/Client.cpp",
+  "output": "w2/CMakeFiles/client.dir/Client.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/../3rdParty/enet/include -std=c++20 -o CMakeFiles/lobby_server.dir/LobbyServer.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/LobbyServer.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/LobbyServer.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/LobbyServer.cpp",
+  "output": "w2/CMakeFiles/lobby_server.dir/LobbyServer.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/../3rdParty/enet/include -std=c++20 -o CMakeFiles/game_server.dir/GameServer.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/GameServer.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/GameServer.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w2/GameServer.cpp",
+  "output": "w2/CMakeFiles/game_server.dir/GameServer.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4",
-  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w4.dir/main.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/main.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/main.cpp"
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w4.dir/client.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/client.cpp",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/client.cpp",
+  "output": "w4/CMakeFiles/w4.dir/client.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w4.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/protocol.cpp",
+  "output": "w4/CMakeFiles/w4.dir/protocol.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w4_server.dir/server.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/server.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/server.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/server.cpp",
+  "output": "w4/CMakeFiles/w4_server.dir/server.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w4_server.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w4/protocol.cpp",
+  "output": "w4/CMakeFiles/w4_server.dir/protocol.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w5.dir/main.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/main.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/main.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/main.cpp",
+  "output": "w5/CMakeFiles/w5.dir/main.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w5.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/protocol.cpp",
+  "output": "w5/CMakeFiles/w5.dir/protocol.cpp.o"
+},
+{
+  "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5",
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w5.dir/entity.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/entity.cpp",
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/entity.cpp",
+  "output": "w5/CMakeFiles/w5.dir/entity.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w5_server.dir/server.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/server.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/server.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/server.cpp",
+  "output": "w5/CMakeFiles/w5_server.dir/server.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w5_server.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/protocol.cpp",
+  "output": "w5/CMakeFiles/w5_server.dir/protocol.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w5_server.dir/entity.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/entity.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/entity.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w5/entity.cpp",
+  "output": "w5/CMakeFiles/w5_server.dir/entity.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w7.dir/main.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/main.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/main.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/main.cpp",
+  "output": "w7/CMakeFiles/w7.dir/main.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w7.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/protocol.cpp",
+  "output": "w7/CMakeFiles/w7.dir/protocol.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w7_server.dir/server.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/server.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/server.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/server.cpp",
+  "output": "w7/CMakeFiles/w7_server.dir/server.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w7_server.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/protocol.cpp",
+  "output": "w7/CMakeFiles/w7_server.dir/protocol.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w7_server.dir/entity.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/entity.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/entity.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w7/entity.cpp",
+  "output": "w7/CMakeFiles/w7_server.dir/entity.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w10.dir/main.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/main.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/main.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/main.cpp",
+  "output": "w10/CMakeFiles/w10.dir/main.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10",
   "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/../3rdParty/enet/include -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/src/external/glfw/include -std=c++20 -o CMakeFiles/w10.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/protocol.cpp",
+  "output": "w10/CMakeFiles/w10.dir/protocol.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w10_server.dir/server.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/server.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/server.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/server.cpp",
+  "output": "w10/CMakeFiles/w10_server.dir/server.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w10_server.dir/protocol.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/protocol.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/protocol.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/protocol.cpp",
+  "output": "w10/CMakeFiles/w10_server.dir/protocol.cpp.o"
 },
 {
   "directory": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10",
   "command": "/usr/bin/c++  -I/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/../3rdParty/enet/include -std=c++20 -o CMakeFiles/w10_server.dir/entity.cpp.o -c /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/entity.cpp",
-  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/entity.cpp"
+  "file": "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/w10/entity.cpp",
+  "output": "w10/CMakeFiles/w10_server.dir/entity.cpp.o"
 }
 ]

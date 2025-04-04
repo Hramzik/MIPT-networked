@@ -31,28 +31,28 @@ void send_set_controlled_entity(ENetPeer *peer, uint16_t eid)
   enet_peer_send(peer, 0, packet);
 }
 
-void send_entity_input(ENetPeer *peer, uint16_t eid, float thr, float steer)
-{
-  ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + sizeof(uint16_t) +
-                                                   2 * sizeof(float),
-                                                   ENET_PACKET_FLAG_UNSEQUENCED);
-  uint8_t *ptr = packet->data;
-  *ptr = E_CLIENT_TO_SERVER_INPUT; ptr += sizeof(uint8_t);
-  memcpy(ptr, &eid, sizeof(uint16_t)); ptr += sizeof(uint16_t);
-  memcpy(ptr, &thr, sizeof(float)); ptr += sizeof(float);
-  memcpy(ptr, &steer, sizeof(float)); ptr += sizeof(float);
-
-  enet_peer_send(peer, 1, packet);
+void send_entity_input(ENetPeer *peer, uint16_t eid, float thr, float steer, uint32_t tick) {
+    ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + sizeof(uint16_t) + 2 * sizeof(float) + sizeof(uint32_t), ENET_PACKET_FLAG_UNSEQUENCED);
+    uint8_t *ptr = packet->data;
+    *ptr = E_CLIENT_TO_SERVER_INPUT; ptr += sizeof(uint8_t);
+    memcpy(ptr, &eid, sizeof(uint16_t)); ptr += sizeof(uint16_t);
+    memcpy(ptr, &thr, sizeof(float)); ptr += sizeof(float);
+    memcpy(ptr, &steer, sizeof(float)); ptr += sizeof(float);
+    memcpy(ptr, &tick, sizeof(uint32_t)); ptr += sizeof(uint32_t);
+    enet_peer_send(peer, 1, packet);
 }
 
-void send_snapshot(ENetPeer *peer, uint16_t eid, float x, float y, float ori, uint32_t serverTime, uint32_t tick) {
-    ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + sizeof(uint16_t) + 3 * sizeof(float) + 2 * sizeof(uint32_t), ENET_PACKET_FLAG_UNSEQUENCED);
+void send_snapshot(ENetPeer *peer, uint16_t eid, float x, float y, float ori, float vx, float vy, float omega, uint32_t serverTime, uint32_t tick) {
+    ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + sizeof(uint16_t) + 6 * sizeof(float) + 2 * sizeof(uint32_t), ENET_PACKET_FLAG_UNSEQUENCED);
     uint8_t *ptr = packet->data;
     *ptr = E_SERVER_TO_CLIENT_SNAPSHOT; ptr += sizeof(uint8_t);
     memcpy(ptr, &eid, sizeof(uint16_t)); ptr += sizeof(uint16_t);
     memcpy(ptr, &x, sizeof(float)); ptr += sizeof(float);
     memcpy(ptr, &y, sizeof(float)); ptr += sizeof(float);
     memcpy(ptr, &ori, sizeof(float)); ptr += sizeof(float);
+    memcpy(ptr, &vx, sizeof(float)); ptr += sizeof(float);
+    memcpy(ptr, &vy, sizeof(float)); ptr += sizeof(float);
+    memcpy(ptr, &omega, sizeof(float)); ptr += sizeof(float);
     memcpy(ptr, &serverTime, sizeof(uint32_t)); ptr += sizeof(uint32_t);
     memcpy(ptr, &tick, sizeof(uint32_t)); ptr += sizeof(uint32_t);
     enet_peer_send(peer, 1, packet);
@@ -84,20 +84,24 @@ void deserialize_set_controlled_entity(ENetPacket *packet, uint16_t &eid)
   eid = *(uint16_t*)(ptr); ptr += sizeof(uint16_t);
 }
 
-void deserialize_entity_input(ENetPacket *packet, uint16_t &eid, float &thr, float &steer)
-{
-  uint8_t *ptr = packet->data; ptr += sizeof(uint8_t);
-  eid = *(uint16_t*)(ptr); ptr += sizeof(uint16_t);
-  thr = *(float*)(ptr); ptr += sizeof(float);
-  steer = *(float*)(ptr); ptr += sizeof(float);
+void deserialize_entity_input(ENetPacket *packet, uint16_t &eid, float &thr, float &steer, uint32_t &tick) {
+    uint8_t *ptr = packet->data;
+    ptr += sizeof(uint8_t);
+    eid = *(uint16_t*)ptr; ptr += sizeof(uint16_t);
+    thr = *(float*)ptr; ptr += sizeof(float);
+    steer = *(float*)ptr; ptr += sizeof(float);
+    tick = *(uint32_t*)ptr;
 }
 
-void deserialize_snapshot(ENetPacket *packet, uint16_t &eid, float &x, float &y, float &ori, uint32_t &serverTime, uint32_t &tick) {
+void deserialize_snapshot(ENetPacket *packet, uint16_t &eid, float &x, float &y, float &ori, float &vx, float &vy, float &omega, uint32_t &serverTime, uint32_t &tick) {
     uint8_t *ptr = packet->data; ptr += sizeof(uint8_t);
     eid = *(uint16_t*)(ptr); ptr += sizeof(uint16_t);
     x = *(float*)(ptr); ptr += sizeof(float);
     y = *(float*)(ptr); ptr += sizeof(float);
     ori = *(float*)(ptr); ptr += sizeof(float);
+    vx = *(float*)(ptr); ptr += sizeof(float);
+    vy = *(float*)(ptr); ptr += sizeof(float);
+    omega = *(float*)(ptr); ptr += sizeof(float);
     serverTime = *(uint32_t*)(ptr); ptr += sizeof(uint32_t);
     tick = *(uint32_t*)(ptr); ptr += sizeof(uint32_t);
 }

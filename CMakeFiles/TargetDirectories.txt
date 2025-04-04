@@ -14,6 +14,7 @@
 /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/CMakeFiles/install.dir
 /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/CMakeFiles/install/local.dir
 /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/CMakeFiles/install/strip.dir
+/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/CMakeFiles/uninstall.dir
 /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/CMakeFiles/package.dir
 /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/CMakeFiles/package_source.dir
 /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/3rdParty/raylib/CMakeFiles/edit_cache.dir

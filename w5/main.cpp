@@ -6,10 +6,26 @@
 #include <math.h>
 
 #include <vector>
+#include <deque>
 #include "entity.h"
 #include "stdio.h"
 #include "protocol.h"
 #include "mathUtils.h"
+
+struct ClientInput {
+    float thr, steer;
+    uint32_t tick;
+};
+
+struct PredictedState {
+    float x, y, ori;
+    float vx, vy, omega;
+    uint32_t tick;
+};
+
+static std::unordered_map<uint16_t, std::deque<PredictedState>> predictedStates;
+static std::deque<ClientInput> inputHistory;
+static uint32_t currentServerTick = 0;
 
 struct Snapshot {
     float x, y, ori;
@@ -57,16 +73,49 @@ static void get_entity(uint16_t eid, Callable c)
 }
 
 void on_snapshot(ENetPacket *packet) {
-    uint16_t eid = invalid_entity;
-    float x, y, ori;
+    uint16_t eid;
+    float x, y, ori, vx, vy, omega;
     uint32_t serverTime, tick;
-    deserialize_snapshot(packet, eid, x, y, ori, serverTime, tick);
-
-    serverState[eid] = {x, y, ori, 0.f, 0.f, 0.f, tick};
+    deserialize_snapshot(packet, eid, x, y, ori, vx, vy, omega, serverTime, tick);
+    currentServerTick = tick;
 
     if (eid == my_entity) {
-        predictedState[eid] = serverState[eid];
+        auto &myPredictedStates = predictedStates[eid];
+        while (!myPredictedStates.empty() && myPredictedStates.front().tick < tick) {
+            myPredictedStates.pop_front();
+        }
+        while (!inputHistory.empty() && inputHistory.front().tick <= tick) {
+            inputHistory.pop_front();
+        }
+
+        if (!myPredictedStates.empty() && myPredictedStates.front().tick == tick) {
+            float dx = x - myPredictedStates.front().x;
+            float dy = y - myPredictedStates.front().y;
+            float dori = ori - myPredictedStates.front().ori;
+
+            Entity &e = entities[indexMap[eid]];
+            e.x += dx;
+            e.y += dy;
+            e.ori += dori;
+            e.vx = vx;
+            e.vy = vy;
+            e.omega = omega;
+
+            for (auto &state : myPredictedStates) {
+                state.x += dx;
+                state.y += dy;
+                state.ori += dori;
+            }
+
+            for (const auto &input : inputHistory) {
+                e.thr = input.thr;
+                e.steer = input.steer;
+                simulate_entity(e, FIXED_DT);
+            }
+        }
     }
+
+    serverState[eid] = {x, y, ori, vx, vy, omega, tick};
 }
 
 static void on_time(ENetPacket *packet, ENetPeer* peer) {
@@ -86,12 +135,14 @@ static void client_side_prediction(float dt) {
     float thr = (up ? 1.f : 0.f) + (down ? -1.f : 0.f);
     float steer = (left ? -1.f : 0.f) + (right ? 1.f : 0.f);
 
+    inputHistory.push_back({thr, steer, currentServerTick});
+
     Entity &e = entities[indexMap[my_entity]];
     e.thr = thr;
     e.steer = steer;
     simulate_entity(e, dt);
 
-    predictedState[my_entity] = {e.x, e.y, e.ori, e.vx, e.vy, e.omega, 0};
+    predictedStates[my_entity].push_back({e.x, e.y, e.ori, e.vx, e.vy, e.omega, currentServerTick});
 }
 
 static void draw_entity(const Entity &e) {
@@ -178,7 +229,7 @@ static void simulate_world(ENetPeer* serverPeer)
         float steer = (left ? -1.f : 0.f) + (right ? 1.f : 0.f);
 
         // Send
-        send_entity_input(serverPeer, my_entity, thr, steer);
+        send_entity_input(serverPeer, my_entity, thr, steer, currentServerTick);
     });
   }
 }

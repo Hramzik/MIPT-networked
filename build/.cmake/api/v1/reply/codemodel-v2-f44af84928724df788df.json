@@ -1,0 +1,484 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "3rdParty",
+					"childIndexes" : 
+					[
+						2,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rdParty-Debug-a57902d5c933ba137f98.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "3rdParty"
+				},
+				{
+					"build" : "3rdParty/raylib",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rdParty.raylib-Debug-b632fcf6b37844b43422.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "3rdParty/raylib",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "3rdParty/raylib/raylib",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rdParty.raylib.raylib-Debug-5e3a69967a014e80b43f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "3rdParty/raylib/src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "3rdParty/raylib/raylib/external/glfw",
+					"childIndexes" : 
+					[
+						5
+					],
+					"jsonFile" : "directory-3rdParty.raylib.raylib.external.glfw-Debug-0af800cea65328ee4386.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 3,
+					"source" : "3rdParty/raylib/src/external/glfw"
+				},
+				{
+					"build" : "3rdParty/raylib/raylib/external/glfw/src",
+					"jsonFile" : "directory-3rdParty.raylib.raylib.external.glfw.src-Debug-a6aec042c6ee56b995bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "3rdParty/raylib/src/external/glfw/src",
+					"targetIndexes" : 
+					[
+						3,
+						7
+					]
+				},
+				{
+					"build" : "3rdParty/enet",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rdParty.enet-Debug-56e5f56020f674ca8521.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 4,
+					"source" : "3rdParty/enet",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "w2",
+					"jsonFile" : "directory-w2-Debug-e52e1b8f10b04019095b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "w2",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						4
+					]
+				},
+				{
+					"build" : "w4",
+					"jsonFile" : "directory-w4-Debug-f86b6609d24d27c62344.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 6,
+					"source" : "w4",
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"build" : "w5",
+					"jsonFile" : "directory-w5-Debug-34b2c06e638d914de561.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 7,
+					"source" : "w5",
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				},
+				{
+					"build" : "w7",
+					"jsonFile" : "directory-w7-Debug-c655d5b7388bd69ab6df.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 8,
+					"source" : "w7",
+					"targetIndexes" : 
+					[
+						14,
+						15
+					]
+				},
+				{
+					"build" : "w10",
+					"jsonFile" : "directory-w10-Debug-30a04e91de9c59e5a25a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 9,
+					"source" : "w10",
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "networked"
+				},
+				{
+					"childIndexes" : 
+					[
+						2,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "networked-3rdparty",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "raylib",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5
+					],
+					"name" : "GLFW",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						3,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "enet",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "w2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "w4",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "w5",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						12,
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "w7",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						14,
+						15
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "w10",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 7,
+					"id" : "client::@4ed85d4b2dbb0505ce58",
+					"jsonFile" : "target-client-Debug-88b845636432299ff9e0.json",
+					"name" : "client",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "enet::@8bf7eba800d4eb2b471a",
+					"jsonFile" : "target-enet-Debug-72d056426e80ac5be560.json",
+					"name" : "enet",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "game_server::@4ed85d4b2dbb0505ce58",
+					"jsonFile" : "target-game_server-Debug-4eb7e5e2a95a3ae43fb8.json",
+					"name" : "game_server",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "glfw::@3c6349411b48bf02f424",
+					"jsonFile" : "target-glfw-Debug-d39540fa2c12e7de50b7.json",
+					"name" : "glfw",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "lobby_server::@4ed85d4b2dbb0505ce58",
+					"jsonFile" : "target-lobby_server-Debug-6de550ca58391c8058c8.json",
+					"name" : "lobby_server",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "raylib::@a33baafefcddb13d8929",
+					"jsonFile" : "target-raylib-Debug-bb5e12e8b6bf24660518.json",
+					"name" : "raylib",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "uninstall::@5ad393b1f093d0f5077c",
+					"jsonFile" : "target-uninstall-Debug-15e79bb4a52546289912.json",
+					"name" : "uninstall",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "update_mappings::@3c6349411b48bf02f424",
+					"jsonFile" : "target-update_mappings-Debug-af37260861329dd7744b.json",
+					"name" : "update_mappings",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "w10::@88e9353f0191b78a4030",
+					"jsonFile" : "target-w10-Debug-d6a52c1b124c806f10d1.json",
+					"name" : "w10",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "w10_server::@88e9353f0191b78a4030",
+					"jsonFile" : "target-w10_server-Debug-637b78bc1fd17027e9ec.json",
+					"name" : "w10_server",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "w4::@6ea2de09515ecfe9be07",
+					"jsonFile" : "target-w4-Debug-f22b735f7a8dea23f9e4.json",
+					"name" : "w4",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "w4_server::@6ea2de09515ecfe9be07",
+					"jsonFile" : "target-w4_server-Debug-930a2095177f9cbc5a1f.json",
+					"name" : "w4_server",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "w5::@20d844575a7bc2d212ad",
+					"jsonFile" : "target-w5-Debug-a6cc71b0735f314b7d40.json",
+					"name" : "w5",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "w5_server::@20d844575a7bc2d212ad",
+					"jsonFile" : "target-w5_server-Debug-ff281201ea611204a910.json",
+					"name" : "w5_server",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "w7::@e90c64692d319c147e81",
+					"jsonFile" : "target-w7-Debug-dd07c49d5dd5c0fcc4e8.json",
+					"name" : "w7",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "w7_server::@e90c64692d319c147e81",
+					"jsonFile" : "target-w7_server-Debug-c31c66ba94b00d8c9a75.json",
+					"name" : "w7_server",
+					"projectIndex" : 8
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked/build",
+		"source" : "/home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

@@ -23,5 +23,6 @@ struct Entity
   uint16_t eid = invalid_entity;
 };
 
+constexpr float FIXED_DT = 1.0f / 50.0f;
 void simulate_entity(Entity &e, float dt);
 

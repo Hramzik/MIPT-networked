@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/game_server.dir/GameServer.cpp.o -o game_server  ../3rdParty/enet/libenet.a

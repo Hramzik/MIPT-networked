@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/w10_server.dir/server.cpp.o CMakeFiles/w10_server.dir/protocol.cpp.o CMakeFiles/w10_server.dir/entity.cpp.o -o w10_server  ../3rdParty/enet/libenet.a 
+/usr/bin/c++ CMakeFiles/w10_server.dir/server.cpp.o CMakeFiles/w10_server.dir/protocol.cpp.o CMakeFiles/w10_server.dir/entity.cpp.o -o w10_server  ../3rdParty/enet/libenet.a
