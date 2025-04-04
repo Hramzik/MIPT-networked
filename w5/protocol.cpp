@@ -45,8 +45,8 @@ void send_entity_input(ENetPeer *peer, uint16_t eid, float thr, float steer)
   enet_peer_send(peer, 1, packet);
 }
 
-void send_snapshot(ENetPeer *peer, uint16_t eid, float x, float y, float ori, uint32_t serverTime) {
-    ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + sizeof(uint16_t) + 3 * sizeof(float) + sizeof(uint32_t), ENET_PACKET_FLAG_UNSEQUENCED);
+void send_snapshot(ENetPeer *peer, uint16_t eid, float x, float y, float ori, uint32_t serverTime, uint32_t tick) {
+    ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + sizeof(uint16_t) + 3 * sizeof(float) + 2 * sizeof(uint32_t), ENET_PACKET_FLAG_UNSEQUENCED);
     uint8_t *ptr = packet->data;
     *ptr = E_SERVER_TO_CLIENT_SNAPSHOT; ptr += sizeof(uint8_t);
     memcpy(ptr, &eid, sizeof(uint16_t)); ptr += sizeof(uint16_t);
@@ -54,18 +54,17 @@ void send_snapshot(ENetPeer *peer, uint16_t eid, float x, float y, float ori, ui
     memcpy(ptr, &y, sizeof(float)); ptr += sizeof(float);
     memcpy(ptr, &ori, sizeof(float)); ptr += sizeof(float);
     memcpy(ptr, &serverTime, sizeof(uint32_t)); ptr += sizeof(uint32_t);
+    memcpy(ptr, &tick, sizeof(uint32_t)); ptr += sizeof(uint32_t);
     enet_peer_send(peer, 1, packet);
 }
 
-void send_time_msec(ENetPeer *peer, uint32_t timeMsec)
-{
-  ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + sizeof(uint32_t),
-                                                   ENET_PACKET_FLAG_RELIABLE);
-  uint8_t *ptr = packet->data;
-  *ptr = E_SERVER_TO_CLIENT_TIME_MSEC; ptr += sizeof(uint8_t);
-  memcpy(ptr, &timeMsec, sizeof(uint32_t)); ptr += sizeof(uint32_t);
-
-  enet_peer_send(peer, 0, packet);
+void send_time_msec(ENetPeer *peer, uint32_t timeMsec, uint32_t currentTick) {
+    ENetPacket *packet = enet_packet_create(nullptr, sizeof(uint8_t) + 2 * sizeof(uint32_t), ENET_PACKET_FLAG_RELIABLE);
+    uint8_t *ptr = packet->data;
+    *ptr = E_SERVER_TO_CLIENT_TIME_MSEC; ptr += sizeof(uint8_t);
+    memcpy(ptr, &timeMsec, sizeof(uint32_t)); ptr += sizeof(uint32_t);
+    memcpy(ptr, &currentTick, sizeof(uint32_t)); ptr += sizeof(uint32_t);
+    enet_peer_send(peer, 0, packet);
 }
 
 MessageType get_packet_type(ENetPacket *packet)
@@ -93,18 +92,19 @@ void deserialize_entity_input(ENetPacket *packet, uint16_t &eid, float &thr, flo
   steer = *(float*)(ptr); ptr += sizeof(float);
 }
 
-void deserialize_snapshot(ENetPacket *packet, uint16_t &eid, float &x, float &y, float &ori, uint32_t &serverTime) {
+void deserialize_snapshot(ENetPacket *packet, uint16_t &eid, float &x, float &y, float &ori, uint32_t &serverTime, uint32_t &tick) {
     uint8_t *ptr = packet->data; ptr += sizeof(uint8_t);
     eid = *(uint16_t*)(ptr); ptr += sizeof(uint16_t);
     x = *(float*)(ptr); ptr += sizeof(float);
     y = *(float*)(ptr); ptr += sizeof(float);
     ori = *(float*)(ptr); ptr += sizeof(float);
     serverTime = *(uint32_t*)(ptr); ptr += sizeof(uint32_t);
+    tick = *(uint32_t*)(ptr); ptr += sizeof(uint32_t);
 }
 
-void deserialize_time_msec(ENetPacket *packet, uint32_t &timeMsec)
-{
-  uint8_t *ptr = packet->data; ptr += sizeof(uint8_t);
-  timeMsec = *(uint32_t*)(ptr); ptr += sizeof(uint32_t);
+void deserialize_time_msec(ENetPacket *packet, uint32_t &timeMsec, uint32_t &currentTick) {
+    uint8_t *ptr = packet->data; ptr += sizeof(uint8_t);
+    timeMsec = *(uint32_t*)(ptr); ptr += sizeof(uint32_t);
+    currentTick = *(uint32_t*)(ptr); ptr += sizeof(uint32_t);
 }
 

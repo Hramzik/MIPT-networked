@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/w5.dir/entity.cpp.o"
+  "CMakeFiles/w5.dir/entity.cpp.o.d"
   "CMakeFiles/w5.dir/main.cpp.o"
   "CMakeFiles/w5.dir/main.cpp.o.d"
   "CMakeFiles/w5.dir/protocol.cpp.o"

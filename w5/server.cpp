@@ -7,6 +7,9 @@
 #include <vector>
 #include <map>
 
+constexpr float FIXED_DT = 1.0f / 50.0f;
+constexpr uint32_t MAX_TICKS_PER_FRAME = 10;
+
 static std::vector<Entity> entities;
 static std::map<uint16_t, ENetPeer*> controlledMap;
 
@@ -81,22 +84,21 @@ static void update_net(ENetHost* server)
   }
 }
 
-static void simulate_world(ENetHost* server, float dt) {
+static void simulate_world(ENetHost* server, float dt, uint32_t tick) {
     uint32_t curTime = enet_time_get();
     for (Entity &e : entities) {
         simulate_entity(e, dt);
         for (size_t i = 0; i < server->peerCount; ++i) {
             ENetPeer *peer = &server->peers[i];
-            send_snapshot(peer, e.eid, e.x, e.y, e.ori, curTime);
+            send_snapshot(peer, e.eid, e.x, e.y, e.ori, curTime, tick);
         }
     }
 }
 
-static void update_time(ENetHost* server, uint32_t curTime)
-{
-  // We can send it less often too
-  for (size_t i = 0; i < server->peerCount; ++i)
-    send_time_msec(&server->peers[i], curTime);
+static void update_time(ENetHost* server, uint32_t curTime, uint32_t currentTick) {
+    for (size_t i = 0; i < server->peerCount; ++i) {
+        send_time_msec(&server->peers[i], curTime, currentTick);
+    }
 }
 
 int main(int argc, const char **argv)
@@ -120,20 +122,30 @@ int main(int argc, const char **argv)
   }
 
   uint32_t lastTime = enet_time_get();
-  while (true)
-  {
-    uint32_t curTime = enet_time_get();
-    float dt = (curTime - lastTime) * 0.001f;
-    lastTime = curTime;
+    float accumulator = 0.0f; // Накопитель времени
+    uint32_t currentTick = 0;
 
-    update_net(server);
-    simulate_world(server, dt);
-    update_time(server, curTime);
+    while (true) {
+        uint32_t curTime = enet_time_get();
+        float frameTime = (curTime - lastTime) * 0.001f;
+        lastTime = curTime;
 
-    printf("%d\n", curTime);
+        frameTime = std::min(frameTime, 0.25f);
 
-    usleep(100000);
-  }
+        accumulator += frameTime;
+
+        int ticksProcessed = 0;
+        while (accumulator >= FIXED_DT && ticksProcessed < MAX_TICKS_PER_FRAME) {
+            update_net(server);
+            simulate_world(server, FIXED_DT, currentTick);
+            accumulator -= FIXED_DT;
+            currentTick++;
+            ticksProcessed++;
+        }
+
+        update_time(server, curTime, currentTick);
+        usleep(1000);
+    }
 
   enet_host_destroy(server);
 
