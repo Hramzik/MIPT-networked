@@ -81,21 +81,15 @@ static void update_net(ENetHost* server)
   }
 }
 
-static void simulate_world(ENetHost* server, float dt)
-{
-  for (Entity &e : entities)
-  {
-    // simulate
-    simulate_entity(e, dt); // 1.f/32.f
-    // send
-    for (size_t i = 0; i < server->peerCount; ++i)
-    {
-      ENetPeer *peer = &server->peers[i];
-      // skip this here in this implementation
-      //if (controlledMap[e.eid] != peer)
-      send_snapshot(peer, e.eid, e.x, e.y, e.ori);
+static void simulate_world(ENetHost* server, float dt) {
+    uint32_t curTime = enet_time_get();
+    for (Entity &e : entities) {
+        simulate_entity(e, dt);
+        for (size_t i = 0; i < server->peerCount; ++i) {
+            ENetPeer *peer = &server->peers[i];
+            send_snapshot(peer, e.eid, e.x, e.y, e.ori, curTime);
+        }
     }
-  }
 }
 
 static void update_time(ENetHost* server, uint32_t curTime)

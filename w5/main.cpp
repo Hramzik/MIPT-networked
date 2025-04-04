@@ -9,7 +9,15 @@
 #include "entity.h"
 #include "stdio.h"
 #include "protocol.h"
+#include "mathUtils.h"
 
+struct Snapshot {
+    float x, y, ori;
+    uint32_t serverTime;
+};
+
+static std::unordered_map<uint16_t, std::vector<Snapshot>> snapshotsHistory;
+static const uint32_t INTERPOLATION_DELAY_MS = 200;
 
 static std::vector<Entity> entities;
 static std::unordered_map<uint16_t, size_t> indexMap;
@@ -39,17 +47,20 @@ static void get_entity(uint16_t eid, Callable c)
     c(entities[itf->second]);
 }
 
-void on_snapshot(ENetPacket *packet)
-{
-  uint16_t eid = invalid_entity;
-  float x = 0.f; float y = 0.f; float ori = 0.f;
-  deserialize_snapshot(packet, eid, x, y, ori);
-  get_entity(eid, [&](Entity& e)
-  {
-      e.x = x;
-      e.y = y;
-      e.ori = ori;
-  });
+void on_snapshot(ENetPacket *packet) {
+    uint16_t eid = invalid_entity;
+    float x = 0.f, y = 0.f, ori = 0.f;
+    uint32_t serverTime = 0;
+    deserialize_snapshot(packet, eid, x, y, ori, serverTime);
+
+    snapshotsHistory[eid].push_back({x, y, ori, serverTime});
+
+    auto &history = snapshotsHistory[eid];
+    history.erase(
+        std::remove_if(history.begin(), history.end(),
+            [serverTime](const Snapshot &s) { return serverTime - s.serverTime > 1000; }),
+        history.end()
+    );
 }
 
 static void on_time(ENetPacket *packet, ENetPeer* peer)
@@ -59,16 +70,55 @@ static void on_time(ENetPacket *packet, ENetPeer* peer)
   enet_time_set(timeMsec + peer->lastRoundTripTime / 2);
 }
 
-static void draw_entity(const Entity& e)
-{
-  const float shipLen = 3.f;
-  const float shipWidth = 2.f;
-  const Vector2 fwd = Vector2{cosf(e.ori), sinf(e.ori)};
-  const Vector2 left = Vector2{-fwd.y, fwd.x};
-  DrawTriangle(Vector2{e.x + fwd.x * shipLen * 0.5f, e.y + fwd.y * shipLen * 0.5f},
-               Vector2{e.x - fwd.x * shipLen * 0.5f - left.x * shipWidth * 0.5f, e.y - fwd.y * shipLen * 0.5f - left.y * shipWidth * 0.5f},
-               Vector2{e.x - fwd.x * shipLen * 0.5f + left.x * shipWidth * 0.5f, e.y - fwd.y * shipLen * 0.5f + left.y * shipWidth * 0.5f},
-               GetColor(e.color));
+static void draw_entity(const Entity &e) {
+    auto it = snapshotsHistory.find(e.eid);
+    if (it == snapshotsHistory.end() || it->second.size() < 2) {
+        const float shipLen = 3.f;
+        const float shipWidth = 2.f;
+        const Vector2 fwd = Vector2{cosf(e.ori), sinf(e.ori)};
+        const Vector2 left = Vector2{-fwd.y, fwd.x};
+        DrawTriangle(Vector2{e.x + fwd.x * shipLen * 0.5f, e.y + fwd.y * shipLen * 0.5f},
+                    Vector2{e.x - fwd.x * shipLen * 0.5f - left.x * shipWidth * 0.5f, e.y - fwd.y * shipLen * 0.5f - left.y * shipWidth * 0.5f},
+                    Vector2{e.x - fwd.x * shipLen * 0.5f + left.x * shipWidth * 0.5f, e.y - fwd.y * shipLen * 0.5f + left.y * shipWidth * 0.5f},
+                    GetColor(e.color));
+        return;
+    }
+
+    const auto &history = it->second;
+    uint32_t currentTime = enet_time_get() - INTERPOLATION_DELAY_MS;
+
+    Snapshot from, to;
+    bool found = false;
+    for (size_t i = 0; i < history.size() - 1; ++i) {
+        if (history[i].serverTime <= currentTime && history[i + 1].serverTime >= currentTime) {
+            from = history[i];
+            to = history[i + 1];
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        from = to = history.back();
+    }
+
+    float t = (float)(currentTime - from.serverTime) / (float)(to.serverTime - from.serverTime);
+    t = clamp(t, 0.0f, 1.0f);
+
+    float interpX = lerp(from.x, to.x, t);
+    float interpY = lerp(from.y, to.y, t);
+    float interpOri = lerp(from.ori, to.ori, t);
+
+    const float shipLen = 3.f;
+    const float shipWidth = 2.f;
+    const Vector2 fwd = Vector2{cosf(interpOri), sinf(interpOri)};
+    const Vector2 left = Vector2{-fwd.y, fwd.x};
+    DrawTriangle(
+        Vector2{interpX + fwd.x * shipLen * 0.5f, interpY + fwd.y * shipLen * 0.5f},
+        Vector2{interpX - fwd.x * shipLen * 0.5f - left.x * shipWidth * 0.5f, interpY - fwd.y * shipLen * 0.5f - left.y * shipWidth * 0.5f},
+        Vector2{interpX - fwd.x * shipLen * 0.5f + left.x * shipWidth * 0.5f, interpY - fwd.y * shipLen * 0.5f + left.y * shipWidth * 0.5f},
+        GetColor(e.color)
+    );
 }
 
 static void update_net(ENetHost* client, ENetPeer* serverPeer)

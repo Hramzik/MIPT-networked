@@ -10,6 +10,7 @@ w5/CMakeFiles/w5.dir/main.cpp.o: w5/main.cpp \
   3rdParty/enet/include/enet/types.h \
   3rdParty/enet/include/enet/unix.h \
   w5/entity.h \
+  w5/mathUtils.h \
   w5/protocol.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
@@ -111,6 +112,7 @@ w5/CMakeFiles/w5.dir/main.cpp.o: w5/main.cpp \
   /usr/include/netinet/in.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
+  /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
@@ -149,6 +151,7 @@ w5/CMakeFiles/w5.dir/main.cpp.o: w5/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/socket_type.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
@@ -156,12 +159,19 @@ w5/CMakeFiles/w5.dir/main.cpp.o: w5/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
@@ -190,110 +200,6 @@ w5/CMakeFiles/w5.dir/main.cpp.o: w5/main.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
 
-w5/CMakeFiles/w5.dir/protocol.cpp.o: w5/protocol.cpp \
-  3rdParty/enet/include/enet/callbacks.h \
-  3rdParty/enet/include/enet/enet.h \
-  3rdParty/enet/include/enet/list.h \
-  3rdParty/enet/include/enet/protocol.h \
-  3rdParty/enet/include/enet/types.h \
-  3rdParty/enet/include/enet/unix.h \
-  w5/entity.h \
-  w5/protocol.h \
-  /usr/include/alloca.h \
-  /usr/include/arpa/inet.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/asm-generic/socket.h \
-  /usr/include/asm-generic/sockios.h \
-  /usr/include/c++/11/bits/std_abs.h \
-  /usr/include/c++/11/cstdint \
-  /usr/include/c++/11/cstdlib \
-  /usr/include/c++/11/cstring \
-  /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/netinet/in.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdint.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/x86_64-linux-gnu/asm/socket.h \
-  /usr/include/x86_64-linux-gnu/asm/sockios.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/in.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
-  /usr/include/x86_64-linux-gnu/bits/socket.h \
-  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/socket.h \
-  /usr/include/x86_64-linux-gnu/sys/time.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
-
-
-/usr/include/string.h:
-
-/usr/include/c++/11/cstring:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
@@ -309,8 +215,6 @@ w5/CMakeFiles/w5.dir/protocol.cpp.o: w5/protocol.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
@@ -325,19 +229,23 @@ w5/CMakeFiles/w5.dir/protocol.cpp.o: w5/protocol.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/strings.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
@@ -348,6 +256,10 @@ w5/CMakeFiles/w5.dir/protocol.cpp.o: w5/protocol.cpp \
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -375,6 +287,10 @@ w5/CMakeFiles/w5.dir/protocol.cpp.o: w5/protocol.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
 /usr/include/asm-generic/sockios.h:
@@ -395,8 +311,6 @@ w5/CMakeFiles/w5.dir/protocol.cpp.o: w5/protocol.cpp \
 
 /usr/include/c++/11/bits/stl_heap.h:
 
-w5/protocol.cpp:
-
 /usr/include/c++/11/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
@@ -411,7 +325,9 @@ w5/protocol.cpp:
 
 /usr/include/c++/11/bits/predefined_ops.h:
 
-/usr/include/c++/11/bits/node_handle.h:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/linux/posix_types.h:
 
 /usr/include/c++/11/bits/hashtable_policy.h:
 
@@ -423,13 +339,11 @@ w5/protocol.cpp:
 
 /usr/include/c++/11/bits/hash_bytes.h:
 
-/usr/include/c++/11/bits/exception.h:
+/usr/include/c++/11/bits/functional_hash.h:
 
-/usr/include/asm-generic/bitsperlong.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
-/usr/include/x86_64-linux-gnu/asm/sockios.h:
-
-/usr/include/c++/11/bits/vector.tcc:
+3rdParty/enet/include/enet/protocol.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
@@ -457,21 +371,19 @@ w5/main.cpp:
 
 /usr/include/alloca.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/c++/11/bits/node_handle.h:
+
+w5/mathUtils.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
 /usr/include/asm-generic/socket.h:
 
 /usr/include/features-time64.h:
 
 3rdParty/enet/include/enet/list.h:
-
-/usr/include/c++/11/bits/functional_hash.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
-
-3rdParty/enet/include/enet/protocol.h:
-
-/usr/include/c++/11/bits/range_access.h:
-
-3rdParty/raylib/src/raylib.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
@@ -494,8 +406,6 @@ w5/main.cpp:
 /usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/c++/11/compare:
-
-/usr/include/c++/11/bits/stl_vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -523,7 +433,17 @@ w5/protocol.h:
 
 /usr/include/stdint.h:
 
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+3rdParty/raylib/src/raylib.h:
+
+/usr/include/c++/11/bits/range_access.h:
+
+/usr/include/c++/11/bits/exception.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/usr/include/c++/11/bits/vector.tcc:
 
 w5/entity.h:
 
@@ -542,6 +462,8 @@ w5/entity.h:
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/c++/11/array:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
 
@@ -563,15 +485,17 @@ w5/entity.h:
 
 /usr/include/c++/11/bits/allocator.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/11/bits/functexcept.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
@@ -613,10 +537,6 @@ w5/entity.h:
 
 /usr/include/c++/11/tr1/gamma.tcc:
 
-/usr/include/linux/posix_types.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
 /usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/c++/11/tr1/legendre_function.tcc:
@@ -626,6 +546,8 @@ w5/entity.h:
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/11/tr1/special_function_util.h:
+
+/usr/include/stdio.h:
 
 /usr/include/c++/11/tuple:
 
