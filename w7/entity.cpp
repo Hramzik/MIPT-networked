@@ -19,9 +19,9 @@ void simulate_entity(Entity &e, float dt)
   e.vy += sinf(e.ori) * va * dt;
   e.omega += e.steer * dt * 0.3f;
   e.ori += e.omega * dt;
-  if (e.ori > PI)
+  if (e.ori > 2 * PI)
     e.ori -= 2.f * PI;
-  else if (e.ori < -PI)
+  else if (e.ori < 0)
     e.ori += 2.f * PI;
   e.x += e.vx * dt;
   e.y += e.vy * dt;

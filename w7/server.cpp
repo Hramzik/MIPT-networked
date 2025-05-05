@@ -4,11 +4,38 @@
 #include "protocol.h"
 #include "mathUtils.h"
 #include <stdlib.h>
+#include <cfloat>
 #include <vector>
 #include <map>
+#include <unordered_map>
+
+struct ClientState {
+    Entity lastSent;
+};
 
 static std::vector<Entity> entities;
 static std::map<uint16_t, ENetPeer*> controlledMap;
+static std::unordered_map<ENetPeer*, std::unordered_map<uint16_t, ClientState>> clientStates;
+
+constexpr int LOD_LEVELS = 4;
+constexpr float LOD_DISTANCES[LOD_LEVELS] = {20.f, 50.f, 100.f, FLT_MAX};
+constexpr float LOD_POS_THRESHOLDS[LOD_LEVELS] = {0.1f, 0.5f, 1.0f, 2.0f};
+constexpr float LOD_ORI_THRESHOLDS[LOD_LEVELS] = {0.1f, 0.2f, 0.3f, 0.4f};
+constexpr int LOD_POS_BITS[LOD_LEVELS] = {16, 12, 8, 6};
+constexpr int LOD_ORI_BITS[LOD_LEVELS] = {12, 8, 6, 4};
+
+int get_lod_level(float distance) {
+    for (int i = 0; i < LOD_LEVELS; ++i) {
+        if (distance <= LOD_DISTANCES[i]) return i;
+    }
+    return LOD_LEVELS - 1;
+}
+
+float wrap_distance(float a, float b, float world_size) {
+    float direct = fabs(a - b);
+    float wrapped = world_size - direct;
+    return fmin(direct, wrapped);
+}
 
 void on_join(ENetPacket *packet, ENetPeer *peer, ENetHost *host)
 {
@@ -38,6 +65,8 @@ void on_join(ENetPacket *packet, ENetPeer *peer, ENetHost *host)
     send_new_entity(&host->peers[i], ent);
   // send info about controlled entity
   send_set_controlled_entity(peer, newEid);
+
+  for (const Entity& ent : entities) clientStates[peer][ent.eid] = {ent};
 }
 
 void create_server_entity(ENetHost *host)
@@ -113,23 +142,54 @@ static void update_ai(Entity& e, float dt)
     e.steer = e.steer != 0.f ? 0.f : ((rand() % 2) * 2.f - 1.f);
 }
 
-static void simulate_world(ENetHost* server, float dt)
-{
-  for (Entity &e : entities)
-  {
-    if (e.serverControlled)
-      update_ai(e, dt);
-    // simulate
-    simulate_entity(e, dt);
-    // send
-    for (size_t i = 0; i < server->peerCount; ++i)
-    {
-      ENetPeer *peer = &server->peers[i];
-      // skip this here in this implementation
-      //if (controlledMap[e.eid] != peer)
-      send_snapshot(peer, e.eid, e.x, e.y, e.ori);
+void send_entity_update(ENetPeer* peer, Entity& e, const Entity& lastSent, int lod) {
+    float posThreshold = LOD_POS_THRESHOLDS[lod];
+    float oriThreshold = LOD_ORI_THRESHOLDS[lod];
+
+    float dx = wrap_distance(e.x, lastSent.x, worldSize);
+    float dy = wrap_distance(e.y, lastSent.y, worldSize);
+    
+    float dori = fabs(e.ori - lastSent.ori);
+    dori = fmin(dori, 2*PI - dori);
+
+    if (dx > posThreshold || dy > posThreshold || dori > oriThreshold) {
+        send_snapshot(peer, e.eid, e.x, e.y, e.ori, e.vx, e.vy, e.omega,
+                     LOD_POS_BITS[lod], LOD_ORI_BITS[lod]);
+        clientStates[peer][e.eid] = {e};
     }
-  }
+}
+
+static void simulate_world(ENetHost* server, float dt) {
+    uint32_t currentTime = enet_time_get();
+    
+    for (Entity& e : entities) {
+        if (e.serverControlled)
+            update_ai(e, dt);
+        
+        simulate_entity(e, dt);
+
+        for (size_t i = 0; i < server->peerCount; ++i) {
+            ENetPeer* peer = &server->peers[i];
+            
+
+            auto controlledIt = std::find_if(controlledMap.begin(), controlledMap.end(),
+                [peer](auto& kv) { return kv.second == peer; });
+            
+            if (controlledIt == controlledMap.end()) continue;
+            
+            Entity& clientEntity = *std::find_if(entities.begin(), entities.end(),
+                [&](Entity& ent) { return ent.eid == controlledIt->first; });
+
+            float dx = wrap_distance(e.x, clientEntity.x, worldSize);
+            float dy = wrap_distance(e.y, clientEntity.y, worldSize);
+            float distance = sqrtf(dx*dx + dy*dy);
+            
+            int lod = get_lod_level(distance);
+            
+            ClientState& state = clientStates[peer][e.eid];
+            send_entity_update(peer, e, state.lastSent, lod);
+        }
+    }
 }
 
 static void update_time(ENetHost* server, uint32_t curTime)

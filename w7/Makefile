@@ -214,6 +214,7 @@ entity.o: entity.cpp.o
 
 # target to build an object file
 entity.cpp.o:
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w7/CMakeFiles/w7.dir/build.make w7/CMakeFiles/w7.dir/entity.cpp.o
 	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w7/CMakeFiles/w7_server.dir/build.make w7/CMakeFiles/w7_server.dir/entity.cpp.o
 .PHONY : entity.cpp.o
 
@@ -222,6 +223,7 @@ entity.i: entity.cpp.i
 
 # target to preprocess a source file
 entity.cpp.i:
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w7/CMakeFiles/w7.dir/build.make w7/CMakeFiles/w7.dir/entity.cpp.i
 	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w7/CMakeFiles/w7_server.dir/build.make w7/CMakeFiles/w7_server.dir/entity.cpp.i
 .PHONY : entity.cpp.i
 
@@ -230,6 +232,7 @@ entity.s: entity.cpp.s
 
 # target to generate assembly for a file
 entity.cpp.s:
+	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w7/CMakeFiles/w7.dir/build.make w7/CMakeFiles/w7.dir/entity.cpp.s
 	cd /home/hramzik_pro/Desktop/coding/1-multiplayer/MIPT-networked && $(MAKE) $(MAKESILENT) -f w7/CMakeFiles/w7_server.dir/build.make w7/CMakeFiles/w7_server.dir/entity.cpp.s
 .PHONY : entity.cpp.s
 
